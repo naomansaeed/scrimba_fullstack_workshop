@@ -1,0 +1,14 @@
+body{
+    margin: 20px;
+}
+
+.avatar{
+    width: 150px;
+}
+
+.card{
+    border: 1px dotted #b0e0e6;
+    padding: 20px;
+    color: #dbe9f4;
+    background: #87ceeb;
+}
