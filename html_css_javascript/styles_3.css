@@ -1,0 +1,28 @@
+.card{
+    color: #222222;
+    background-color: lightgrey;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 2px solid #4a5667;
+    border-radius: 20px;
+
+    padding-top: 70px;
+    padding-bottom: 2px;
+    padding-right: 70px;
+    padding-left: 8px;
+}
+
+.button-follow{
+    font-weight: bold;
+    color: #0f1419;
+    background-color: white;
+    border-color: #cfd9de;
+
+    border: 2px solid;
+    border-radius: 25px;
+
+    padding: 15px;
+}
