@@ -12,11 +12,18 @@ body{
     margin-right: auto;
     display: flex;
     justify-content: space-around;
+    text-align: left;
     padding: 20px;
-    color: #dbe9f4;
-    background: #87ceeb;
+    color: #2b2839;
+    background: #ddebf8;
+    border-bottom: 5px solid #d8cefe;
 }
 
 .border-blue{
     border: 1px dotted blue;
+}
+
+.text-box{
+    
+    padding: 5px;
 }
