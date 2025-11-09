@@ -1,6 +1,6 @@
 body{
     color: white;
-    background-image: url("images/galaxy.jpg");
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzZrMDg5OGc2ZjFkcHczdncxNG9qejlraHJ5d2tnMDVwNDBrYTlpMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iicDrNGWxHmDrIni6j/giphy.gif");
     background-size: cover;
     text-align: center;
     font-family: "Orbitron", sans-serif;
@@ -21,4 +21,21 @@ body{
     font-family: "Orbitron", sans-serif;
     background: white;
     border: none;
+}
+
+.cta{
+  border: 2px solid #a3bc71;
+  padding: 5px 10px;
+  background: #8f4737;
+}
+
+.highlighter{
+  padding: 5px 10px;
+  border-bottom: 4px solid #ffffff;
+}
+
+#main-logo{
+  width: 300px;
+  border: 3px solid;
+  border-color: white;
 }
