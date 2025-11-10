@@ -1,9 +1,18 @@
 body{
-    color: white;
-    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzZrMDg5OGc2ZjFkcHczdncxNG9qejlraHJ5d2tnMDVwNDBrYTlpMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iicDrNGWxHmDrIni6j/giphy.gif");
-    background-size: cover;
+    margin: 0;
+    color: #82a5ca;
+    height: 400px;
     text-align: center;
     font-family: "Orbitron", sans-serif;
+}
+
+
+#hero{
+    
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzZrMDg5OGc2ZjFkcHczdncxNG9qejlraHJ5d2tnMDVwNDBrYTlpMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iicDrNGWxHmDrIni6j/giphy.gif");
+    background-size: cover;
+    padding: 10px 0 40px 0;
+    text-shadow: 5px 5px black;
 }
 
 
@@ -21,6 +30,7 @@ body{
     font-family: "Orbitron", sans-serif;
     background: white;
     border: none;
+    font-weight: bolder;
 }
 
 .cta{
