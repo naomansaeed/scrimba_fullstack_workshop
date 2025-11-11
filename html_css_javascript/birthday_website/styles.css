@@ -1,0 +1,8 @@
+body{
+    font-family: "Happy Monkey", sans-serif;
+}
+
+#target{
+    width: 300px;
+    border-radius: 150px;
+}
