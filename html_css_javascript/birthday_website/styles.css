@@ -1,7 +1,7 @@
 body{
     text-align: center;
     color: white;
-    background-color: #a2d2ff;
+    background: linear-gradient(#a2d2ff,pink);
     font-family: "Happy Monkey", sans-serif;
     display: flex;
     flex-direction: column;
