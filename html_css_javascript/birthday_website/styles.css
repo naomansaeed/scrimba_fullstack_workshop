@@ -22,3 +22,10 @@ h1, h2, h3, h4, p {
 h2, h3 {
     background: #efb0c9;
 }
+
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

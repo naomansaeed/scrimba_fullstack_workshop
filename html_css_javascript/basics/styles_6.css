@@ -2,8 +2,9 @@
     border: 8px solid #016a26;
     height: 260px;
     display: flex;
-    justify-content: space-around;
-    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
 }
 
 .item {
