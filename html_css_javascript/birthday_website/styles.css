@@ -63,3 +63,7 @@ h1, h2, h3, h4, p {
     background-image:url("images/gift-cover.jpg");
     background-size: cover;
 }
+
+.gift-img:hover{
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW83dHR6M2tqMm14OHUyOXk0Y3VneW85OWJibzB2YzhiOThib3drbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MeIucAjPKoA120R7sN/giphy.gif");
+}
