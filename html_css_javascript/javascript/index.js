@@ -1,5 +1,5 @@
 // document.getElementById("count").innerText = 5
-
+let count = 0 
 // let humanDogRatio = 7 
 // let myAge = 32
 
@@ -12,3 +12,8 @@
 // bonusPoints = bonusPoints + 45
 
 // console.log(bonusPoints)
+
+function increment() {
+    count = count + 1
+    document.getElementById("count-el").innerText = count
+}
