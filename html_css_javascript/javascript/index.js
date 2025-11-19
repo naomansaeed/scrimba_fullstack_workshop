@@ -19,3 +19,7 @@ function increment() {
     // grab the h2 element that has 'count-el' id & change its inner text to the value of the count variable
     document.getElementById("count-el").innerText = count
 }
+
+function save() {
+    console.log(count)
+}
