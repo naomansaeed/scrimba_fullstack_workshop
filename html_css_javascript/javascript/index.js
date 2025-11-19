@@ -1,8 +1,14 @@
 // document.getElementById("count").innerText = 5
 
-let humanDogRatio = 7 
-let myAge = 32
+// let humanDogRatio = 7 
+// let myAge = 32
 
-dogAge = myAge * humanDogRatio
+// dogAge = myAge * humanDogRatio
 
-console.log(dogAge)
+// let bonusPoints = 50
+
+// bonusPoints = bonusPoints + 50
+// bonusPoints = bonusPoints - 75
+// bonusPoints = bonusPoints + 45
+
+// console.log(bonusPoints)
