@@ -17,10 +17,17 @@ function increment() {
     // inrement the count veriable
     count += 1
     // grab the h2 element that has 'count-el' id & change its inner text to the value of the count variable
-    document.getElementById("count-el").innerText = count
+    document.getElementById("count-el").textContent = count
 }
 
 function save() {
-    saved = " "+ count + " -"
-    document.getElementById("saved").innerText += saved
+    // store the present value of count in saved variable
+    saved =  count + " - "
+    // add the  value of saved to the previous entries string
+    document.getElementById("saved").textContent += saved
+}
+
+function reset(){
+    // get the current value of the count-el reset it to 0 and store in the count variable
+    count = document.getElementById("count-el").textContent = 0
 }
