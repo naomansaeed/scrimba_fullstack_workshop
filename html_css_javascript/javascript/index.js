@@ -2,7 +2,7 @@
 let count = 0 
 // let humanDogRatio = 7 
 // let myAge = 32
-
+let saved = 0
 // dogAge = myAge * humanDogRatio
 
 // let bonusPoints = 50
@@ -21,5 +21,6 @@ function increment() {
 }
 
 function save() {
-    console.log(count)
+    saved = " "+ count + " -"
+    document.getElementById("saved").innerText += saved
 }
