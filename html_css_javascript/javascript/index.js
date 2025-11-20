@@ -15,7 +15,7 @@ let count = 0
 
 function increment() {
     // inrement the count veriable
-    count = count + 1
+    count += 1
     // grab the h2 element that has 'count-el' id & change its inner text to the value of the count variable
     document.getElementById("count-el").innerText = count
 }
