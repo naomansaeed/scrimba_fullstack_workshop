@@ -11,6 +11,16 @@ h1 {
     color: goldenrod;
 }
 
+button {
+    width: 150px;
+    padding: 5px;
+    font-weight: bold;
+    background: goldenrod;
+    color: #016f32;
+    border: none;
+    border-radius: 3px;
+}
+
 #message-el {
     font-style: italic;
 }
