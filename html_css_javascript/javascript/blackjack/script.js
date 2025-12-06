@@ -31,30 +31,15 @@ function startGame() {
     isAlive = false
     }
     messageEl.textContent = message
-    sumEl.textContent += sum
-    cardsEl.textContent += firstCard + " " + secondCard
+    sumEl.textContent = "Sum: " + sum
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
    //console.log(message)
 }
 
 function drawCard() {
     //console.log("card was drawn")
     sum += card
-    if (sum <= 20) {
-    message = "Do you want to draw a new card?"
-    // console.log(message)
-    }
-    else if (sum === 21) {
-    message = "You have got the blackjack!"
-    // console.log(message)
-    hasBlackjack = true
-    }
-    else {
-    message = "You are out of the game!"
-    // console.log (message)
-    isAlive = false
-    }
-    messageEl.textContent = message
-    sumEl.textContent = "Sum: " + sum
+    startGame()
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard + " " + card
 }
 
