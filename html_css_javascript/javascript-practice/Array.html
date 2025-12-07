@@ -12,6 +12,10 @@
         <li id="list-3"></li>
     </ul>
     <p id="count-el"></p>
+    <p id="chat-1"></p>
+    <p id="chat-2"></p>
+    <p id="chat-3"></p>
+    <p id="chat-4"></p>
     <script>
         let recipes = ["Beef Stack", "Carbanara", "Trout Salami"]
         document.getElementById("list-1").textContent = recipes [0]
@@ -24,6 +28,17 @@
         let cards = [7, 4]
         cards.push(6)
         console.log(cards)
+
+        //wolf & Lamb Chat
+
+        let messages = ["Wolf: You are polluting the water for me.", "Lamb: You are upstrem from me. I can't.", "Wolf: Embarassing an elder is disrespectful."]
+        let newMessage = "Lamb: I'm simply telling the truth."
+        messages.push(newMessage)
+        console.log(messages)
+        document.getElementById("chat-1").textContent = messages[0]
+        document.getElementById("chat-2").textContent = messages[1]
+        document.getElementById("chat-3").textContent = messages[2]
+        document.getElementById("chat-4").textContent = messages[3]
     </script>
 </body>
 </html>
