@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solving a Problem</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let sentence = ["Hello!", "my", "name", "is", "Zoro"]
+        let greetingEl = document.getElementById("output")
+        //console.log(sentence);
+        //console.log(greetingEl);
+        for (let i = 0; i < sentence.length ; i++) {
+            //console.log(sentence[i]);
+            greetingEl.textContent += sentence [i] + " " ;
+        }
+    </script>
+</body>
+</html>

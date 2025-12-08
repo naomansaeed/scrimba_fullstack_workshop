@@ -6,7 +6,7 @@
     <title>Loops Demo</title>
 </head>
 <body>
-    <p class="output"></p>
+    <p id="greeting-el"></p>
     <script>
         //count from 1 to 10
         for (let count =1; count < 11; count += 1) {
@@ -33,6 +33,18 @@
         for (let i = 0; i < cards.length; i++) {
             console.log(cards[i])
         }
+
+        //array and loop interaction with DOM
+        let sentence = ["Hello!", "my", "name", "is", "Zoro"]
+        let greetingEl = document.getElementById("greeting-el")
+
+        //console.log(sentence); console.log(greetingEl);
+
+        for (let i = 0; i > sentence.length; i++) {
+          //  greetingEl.textContent += sentence[i]
+          console.log(sentence)
+        }
+
     </script>
 </body>
 </html>

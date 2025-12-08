@@ -16,6 +16,8 @@
     <p id="chat-2"></p>
     <p id="chat-3"></p>
     <p id="chat-4"></p>
+
+    <p id="greeting-el"></p>
     <script>
         let recipes = ["Beef Stack", "Carbanara", "Trout Salami"]
         document.getElementById("list-1").textContent = recipes [0]
@@ -39,6 +41,14 @@
         document.getElementById("chat-2").textContent = messages[1]
         document.getElementById("chat-3").textContent = messages[2]
         document.getElementById("chat-4").textContent = messages[3]
+
+        //array and loop interaction with DOM
+        let sentence = ["Hello!", "my", "name", "is", "Zoro"]
+        let greetingEl = document.getElementById("greeting-el")
+
+        for (let i = 0; i > sentence.length; i++) {
+            greetingEl.textContent += sentence[i] + " "
+        }
     </script>
 </body>
 </html>
