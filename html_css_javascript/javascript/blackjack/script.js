@@ -47,8 +47,9 @@ function renderGame() {
 function drawCard() {
     //console.log("card was drawn")
     sum += card
+    cards.push(card)
     renderGame()
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard + " " + card
+    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1] + " " + cards[2]
 }
 
 //console.log(message)
