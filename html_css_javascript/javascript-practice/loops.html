@@ -8,10 +8,27 @@
 <body>
     <p class="output"></p>
     <script>
+        //count from 1 to 10
         for (let count =1; count < 11; count += 1) {
             console.log(count)
            // document.getElementsByClassName("output").textContent = count
         }
+        // count from 10 to 100 in increments of 10
+        for (let i=10; i<=100 ; i+=10 ){
+            console.log(i)
+        }
+        // loop + array for showing chat
+        let messages = ["Wolf: You are polluting the water for me.", 
+        "Lamb: You are upstrem from me. I can't.", 
+        "Wolf: Embarassing an elder is disrespectful.",
+        "Lamb: I'm simply telling the truth.",
+        "Wolf: Back in my day, children used to be seen & not heard."
+        ]
+
+        for(let i =0; i < messages.length; i+=1) {
+            console.log(messages[i])
+        }
+
     </script>
 </body>
 </html>
