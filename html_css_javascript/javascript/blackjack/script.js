@@ -19,7 +19,8 @@ sum = firstCard + secondCard
 function getRandomCard() {
     let randomNumber = Math.random() * 13
     let flooredNumber = Math.floor(randomNumber)
-    return flooredNumber
+    let newCard = flooredNumber + 1
+    return newCard
 }
 
 function startGame() {
