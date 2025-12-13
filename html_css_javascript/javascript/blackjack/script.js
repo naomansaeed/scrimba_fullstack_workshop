@@ -1,7 +1,7 @@
 
-let firstCard = 10
-let secondCard = 4
-let card = 7
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let card = getRandomCard()
 let cards = [firstCard, secondCard] //Array
 
 let sum 
@@ -16,6 +16,9 @@ let cardsEl = document.getElementById("cards-el")
 sum = firstCard + secondCard
 
 //console.log(sum)
+function getRandomCard() {
+    return 5
+}
 
 function startGame() {
     renderGame()
