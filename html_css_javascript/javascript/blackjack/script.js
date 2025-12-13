@@ -17,7 +17,9 @@ sum = firstCard + secondCard
 
 //console.log(sum)
 function getRandomCard() {
-    return 5
+    let randomNumber = Math.random() * 13
+    let flooredNumber = Math.floor(randomNumber)
+    return flooredNumber
 }
 
 function startGame() {
