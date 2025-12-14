@@ -31,3 +31,9 @@ button {
     flex-direction: column;
     align-items: center;
 }
+
+#player-el{
+    background: red;
+    padding: 8px;
+    width: 200px;
+}
