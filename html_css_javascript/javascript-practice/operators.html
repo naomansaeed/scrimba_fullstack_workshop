@@ -7,7 +7,27 @@
 </head>
 <body>
     <script>
-        
+        let hasCompletedCourse = true 
+        let givesCertificates = true
+
+        if (hasCompletedCourse && givesCertificates) {
+            generateCertificate();
+        }
+
+        function generateCertificate() {
+            console.log("generating Certificate ...");
+        }
+
+        let hasSolvedChallenge = false
+        let hasHintsLeft = false 
+
+        if (!hasSolvedChallenge && !hasHintsLeft){
+            showSolution();
+        }
+
+        function showSolution () {
+            console.log("Showing The Solution ...");
+        }
     </script>
 </body>
 </html>
