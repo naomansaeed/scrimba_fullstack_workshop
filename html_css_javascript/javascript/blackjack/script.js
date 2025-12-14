@@ -1,19 +1,19 @@
 
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let card = getRandomCard()
-let cards = [firstCard, secondCard] //Array
+let firstCard // = getRandomCard()
+let secondCard // = getRandomCard()
+let card //= getRandomCard()
+let cards = [] // [firstCard, secondCard] //Array
 
 let sum 
 let hasBlackjack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
-sum = firstCard + secondCard
+//sum = firstCard + secondCard
 
 //console.log(sum)
 function getRandomCard() {
@@ -21,6 +21,7 @@ function getRandomCard() {
     let flooredNumber = Math.floor(randomNumber)
     let newCard = flooredNumber + 1
     // return newCard
+    // card value logic - cards in the deck get assigned numerical value accourding to rules of the game.
     if (newCard > 10) {
         return 10
     }
@@ -31,6 +32,13 @@ function getRandomCard() {
 }
 
 function startGame() {
+    //initialize values
+    firstCard = getRandomCard()
+    secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    hasBlackjack = false
+    isAlive = true
     renderGame()
 }
 
@@ -63,10 +71,18 @@ function renderGame() {
 
 function drawCard() {
     //console.log("card was drawn")
-    sum += card
-    cards.push(card)
+
+    // Players should not be able to draw if they’re already out (!isAlive) or have Blackjack.
+    if (isAlive === false || hasBlackjack === true) {
+        message = "We are having a problem"
+        messageEl.textContent = message
+        return //prevent drawing
+    }
+    let newCard = getRandomCard()
+    sum += newCard
+    cards.push(newCard)
     renderGame()
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1] + " " + cards[2]
+   // cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1] + " " + cards[2]
 }
 
 //console.log(message)
