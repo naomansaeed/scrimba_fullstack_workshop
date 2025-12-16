@@ -10,8 +10,8 @@ let isAlive = false
 let message = ""
 
 let player = {
-    playerName: "Sam",
-    playerChips: 145
+    name: "Sam",
+    chips: 145
 }
 
 let messageEl = document.getElementById("message-el")
@@ -42,7 +42,7 @@ function startGame() {
     secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
-    playerEL.textContent = "Sam; $ "
+    playerEL.textContent = player.name + ": $" + player.chips  //"Sam; $ "
     hasBlackjack = false
     isAlive = true
     renderGame()
