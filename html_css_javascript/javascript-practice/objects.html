@@ -6,6 +6,7 @@
     <title>Objects</title>
 </head>
 <body>
+    <p id="display-el"></p>
     <script>
         // course object
         let course = {
@@ -44,6 +45,16 @@
         }
 
         gamer.sayHello()
+
+        // Creating Person object
+        let person = {
+            name: "Ahmer",
+            age: 27,
+            country: "Tajikistan"
+        } 
+
+        let displayEl = document.getElementById("display-el")
+        displayEl.textContent = person.name + " is " + person.age + " years old citizen of " + person.country + "."
     </script>
 </body>
 </html>
