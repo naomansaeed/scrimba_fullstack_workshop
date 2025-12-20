@@ -1,0 +1,73 @@
+/* Minimal, fun, and responsive styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Happy Monkey', cursive;
+      background: #ffeaa7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #2d3436;
+    }
+
+    h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #e17055;
+      text-shadow: 2px 2px 0 #fdcb6e;
+    }
+
+    #stage {
+      font-size: 5rem;
+      font-family: 'Permanent Marker', cursive;
+      color: #e17055;
+      margin: 20px 0;
+      min-height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #fighterButton {
+      font-family: 'Happy Monkey', cursive;
+      font-size: 1.5rem;
+      padding: 12px 24px;
+      background: #0984e3;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #fighterButton:hover {
+      background: #74b9ff;
+      transform: scale(1.05);
+    }
+
+    #fighterButton:focus {
+      outline: 3px solid #00cec9;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      #stage {
+        font-size: 3.5rem;
+      }
+      #fighterButton {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+      }
+    }

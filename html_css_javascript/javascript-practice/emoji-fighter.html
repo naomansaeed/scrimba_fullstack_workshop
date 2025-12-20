@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="emoji.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Emoji Fighter</title>
+</head>
+<body>
+    <h1>Emoji</br>Fighter</h1>
+    <div id="stage"></div>
+    <button id="fighterButton">Pick Fighters</button>
+    <script>
+        let fighters = ["🐵", "🐶", "🐷", "🐺", "🦓", "🐱", "🐔", "🐲", "🐰", "🐹", "🐸", "🦊", "🦒"]
+        
+        let stageEl = document.getElementById("stage")
+        let fightButton = document.getElementById("fighterButton")
+
+        fightButton.addEventListener("click", function(){
+            let randomIndexOne = Math.floor(Math.random() * fighters.length)
+            let randomIndexTwo = Math.floor(Math.random() * fighters.length)
+
+            stageEl.textContent = fighters[randomIndexOne] + " vs " + fighters[randomIndexTwo]
+        })
+    </script>
+</body>
+</html>
