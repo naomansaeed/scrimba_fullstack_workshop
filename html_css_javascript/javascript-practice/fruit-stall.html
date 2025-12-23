@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit stall</title>
+</head>
+<body>
+    <div id="apple-shelf"></div>
+    <div id="orange-shelf"></div>
+    <script>
+        let fruits = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+        let appleshelf = document.getElementById("apple-shelf")
+        let orangeshelf = document.getElementById("orange-shelf")
+
+        function placeProduce() {
+            for(let i = 0; i < fruits.length; i++) {
+                if (fruits[i] === "🍎") {
+                    appleshelf.textContent += "🍎" + " | "
+                } 
+                else if (fruits[i] === "🍊") {
+                    orangeshelf.textContent += "🍊" + " | "
+                }
+            }
+        }
+
+        placeProduce();
+    </script>
+</body>
+</html>
