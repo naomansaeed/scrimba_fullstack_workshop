@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <div id="box">Open the box!</div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Box Test</title>
     <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
         #box {
             cursor: pointer;
             width: 200px;
@@ -27,16 +15,37 @@
             color: white;
             font-weight: bold;
         }
+        button {
+            padding: 8px 16px;
+        }
     </style>
+</head>
+<body>
+    <div id="box">Open the box!</div>
+
     <script>
         const box = document.getElementById('box');
 
-        box.addEventListener('click', () => {
+        box.addEventListener('click', function openBox() {
+            // Remove the 'click to open' listener to avoid re-triggering
+            box.removeEventListener('click', openBox);
+
             box.style.backgroundColor = 'lightcoral';
-            box.innerHTML = "<button> Buy! </button>";
-            //box.textContent = 'The box is now open!';
+            box.style.cursor = 'default';
+            box.textContent = ''; // Clear text
+
+            const buyBtn = document.createElement('button');
+            buyBtn.textContent = 'Buy!';
+
+            buyBtn.addEventListener('click', () => {
+                const msg = document.createElement('p');
+                msg.textContent = 'You have pressed the button!';
+                //msg.style.color = 'black';
+                box.appendChild(msg);
+            });
+
+            box.appendChild(buyBtn);
         });
     </script>
 </body>
-
 </html>
