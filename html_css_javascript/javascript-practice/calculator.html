@@ -19,8 +19,122 @@
         </form>
         <h2 id="result">0 + 0 = 0</h2>
     </main>
+    <style>
+        * {
+             box-sizing: border-box;
+            }
+
+        body {
+                margin: 0;
+                padding: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f8f9fa;
+                display: flex;
+                justify-content: center;
+            }
+
+        main {
+                 background: white;
+                 padding: 2rem;
+                 border-radius: 12px;
+                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                 width: 100%;
+                 max-width: 500px;
+            }
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: steelblue;
+    box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.2);
+}
+
+button#btn-add {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button#btn-add:hover {
+    background-color: #3a6d96; /* slightly darker steelblue */
+}
+
+button#btn-add:active {
+    transform: translateY(1px);
+}
+
+h2#result {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    padding: 1rem;
+    background-color: aqua; /*#f1f8ff; /* very light steelblue tint */
+    border-radius: 8px;
+    border-left: 4px solid steelblue;
+}
+    </style>
     <script>
-        
+        // retrieve html elements
+        const form = document.getElementById("form");
+        const numOneInput = document.getElementById("num1");
+        const numTwoInput = document.getElementById("num2");
+        const resultText = document.getElementById("result");
+
+        // Form event listener
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const numOneValue = Number(numOneInput.value);
+            const numTwoValue = Number(numTwoInput.value);
+
+            // Optional: handle invalid input
+            if (isNaN(numOneValue) || isNaN(numTwoValue)) {
+                resultText.innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            let answer = numOneValue + numTwoValue;
+
+            resultText.innerText = `${numOneValue} + ${numTwoValue} = ${answer}`
+            //resultText.innerText = `${numOneValue} + ${numTwoValue} = ${answer}`;
+            //resultText.innerText = answer
+            //'${numOneValue} + ${numTwoValue} = ${answer}'
+            
+            //'${numOneValue} + '
+        })
     </script>
 </body>
 </html>
