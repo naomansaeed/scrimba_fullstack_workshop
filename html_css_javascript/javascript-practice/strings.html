@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template strings</title>
+</head>
+<body>
+    <p id="output-1"></p>
+    <script>
+        // template strings / literals
+        const recipient = "Jordan";
+
+        // use template string in email
+        const email = "Hey, " + recipient + "! how is it going?";
+        //console.log(email);
+        const outputEl = document.getElementById("output-1");
+        outputEl.textContent = email
+    </script>
+</body>
+</html>
