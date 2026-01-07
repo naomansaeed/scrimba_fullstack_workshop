@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Sheet</title>
+</head>
+<body>
+    <header>
+        <h1>Heading 1 in header.</h1>
+        <p>This is a pargraph inside the header.</p>
+    </header>
+    <main>
+        <h1>Heading 1 in Main Section</h1>
+        <h2>Heading 2 in main section.</h2>
+        <h3>Heading 3 in main section.</h3>
+        <p>This is a pargraph inside the main section.</p>
+
+        <div class="main-divs" id="first-div"></div>
+    </main>
+    <footer>
+        <p>The footer did not automatically go to the bottom of the page.</p>
+    </footer>
+    <style>
+        * {
+            font-size: large;
+        }
+
+        body {
+            margin: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: royalblue;
+            color: antiquewhite;
+        }
+
+        main {
+            background-color:cornflowerblue;
+            color:gainsboro;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aquamarine;
+            color: black;
+        }
+
+        p {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main-divs {
+            max-width: inherit;
+            max-height: inherit;
+            background-color: azure;
+            margin: 4px;
+            
+        }
+
+        #first-div {
+            width: 600px;
+            height: 400px;
+            
+        }
+        
+    </style>
+</body>
+</html>
