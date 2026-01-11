@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="response"></p>
+    <script>
+        const response = document.getElementById("response");
+        const credits = 0;
+        if (credits > 0) {
+            response.textContent = "Let's Play."
+            console.log("more than zero is a truthy value");
+        }
+        else {
+            response.textContent = "You are not ready yet."
+            console.log("0 is a falsy value.");
+        }
+    </script>
+</body>
+</html>
