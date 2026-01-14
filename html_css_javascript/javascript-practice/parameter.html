@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters & Arguments</title>
+</head>
+<body>
+    <p id="welcome-el"></p>
+    <script>
+        const welcomeEl = document.getElementById("welcome-el");
+
+        function greetUser(greeting) {
+            welcomeEl.innerText = greeting + ", Sam! 👋"
+            //welcomeEl.innerText = "Welcome back, " + name + "! 🤵"
+        }
+
+        greetUser("Ni Hao");
+    </script>
+</body>
+</html>
