@@ -7,15 +7,29 @@
 </head>
 <body>
     <p id="welcome-el"></p>
+    <p id="result"></p>
     <script>
         const welcomeEl = document.getElementById("welcome-el");
 
-        function greetUser(greeting) {
-            welcomeEl.innerText = greeting + ", Sam! 👋"
+        function greetUser(greeting, username, emoji) {
+            welcomeEl.innerText = `${greeting}, Dear  ${username}! ${emoji}`
             //welcomeEl.innerText = "Welcome back, " + name + "! 🤵"
         }
 
-        greetUser("Ni Hao");
+        greetUser("Salutations", "Anne", "👋");
+
+        // -----
+
+        const resultEL = document.getElementById("result");
+        // parameters are processed inside the function.
+        function addNumbers (a,b) {
+            let myresult = a+b;
+            resultEL.innerText = `Total = ${myresult}`;
+        }
+
+        //arguments are passed from outside the function
+
+        addNumbers(7,9);
     </script>
 </body>
 </html>
