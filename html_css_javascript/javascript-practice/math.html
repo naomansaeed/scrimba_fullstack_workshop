@@ -25,14 +25,16 @@
         //---- Rounding numbers with decimal values
         const secondPara = document.getElementById("output-2");
         const roundBtn = document.getElementById("round-btn");
-        secondPara.innerText = 420.69235632455;
+        let myNum = 420.69235632455;
 
         roundBtn.addEventListener('click', function(){
-            let myNum = secondPara.innerText;
-            let result = Math.round(myNum * 100) / 100;
-            console.log(result);
-            //console.log(myNum.toFixed(2));
+             
             
+            let result; 
+            //console.log(result);
+            //console.log(myNum.toFixed(2));
+            result = myNum.toFixed(2);
+            secondPara.innerText = `Discounted Price: $ ${result}`
         });
 
     </script>
