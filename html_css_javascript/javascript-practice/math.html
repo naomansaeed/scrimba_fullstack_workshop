@@ -9,6 +9,7 @@
     <p id="output-1"></p>
     <p id="output-2"></p>
     <button id="round-btn">Round the value</button>
+    <p id="output-3"></p>
     <script>
         
         function rollDice() {
@@ -36,6 +37,13 @@
             result = myNum.toFixed(2);
             secondPara.innerText = `Discounted Price: $ ${result}`
         });
+
+        // --- convert string to number
+        const thirdPara = document.getElementById("output-3");
+        let firstNum = "420.69235632455";
+
+        firstNum = Number(firstNum);
+        thirdPara.innerText = firstNum.toFixed(3);
 
     </script>
 </body>
