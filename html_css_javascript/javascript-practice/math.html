@@ -7,6 +7,8 @@
 </head>
 <body>
     <p id="output-1"></p>
+    <p id="output-2"></p>
+    <button id="round-btn">Round the value</button>
     <script>
         
         function rollDice() {
@@ -19,6 +21,20 @@
             return dice
         }
         document.getElementById("output-1").textContent = rollDice()
+
+        //---- Rounding numbers with decimal values
+        const secondPara = document.getElementById("output-2");
+        const roundBtn = document.getElementById("round-btn");
+        secondPara.innerText = 420.69235632455;
+
+        roundBtn.addEventListener('click', function(){
+            let myNum = secondPara.innerText;
+            let result = Math.round(myNum * 100) / 100;
+            console.log(result);
+            //console.log(myNum.toFixed(2));
+            
+        });
+
     </script>
 </body>
 </html>
