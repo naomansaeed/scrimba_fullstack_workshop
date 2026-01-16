@@ -36,6 +36,28 @@
         logBtn.addEventListener('click', function() {
             console.log(data[0].Score);
         });
+
+        //--- Sentence Generation Function
+        let countries = ["Russia", "China", "Canada"]
+        let fruits = ["mango", "banana", "strawberry"]
+            function generateSentence (desc, arr) {
+                let result = "";
+                let lastIndex = arr.length -1;
+                    for (i=0; i<arr.length; i++) {
+                        if (i < lastIndex){
+                            result += arr[i] +", ";
+                        }
+                        else {
+                            result += arr[i] +".";
+                        }
+                    }
+                let count = arr.length + 1;
+                let output = `The ${arr.length} ${desc} are ${result}`
+            return output;
+            }
+
+        console.log(generateSentence("larest countries", countries));
+        console.log(generateSentence("best fruits", fruits));
     </script>
 </body>
 </html>
