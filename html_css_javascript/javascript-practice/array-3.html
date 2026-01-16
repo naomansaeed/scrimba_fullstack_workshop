@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <button id="log-btn">LOG JANE's SCORE</button>
     <script>
         let myCources = ["Learn CSS Animation", "UI Design Fundamentals", "Intro to Clean Code"];
 
@@ -23,6 +24,18 @@
         //localStorage.setItem("myCredits", 100);
         let mycredits = localStorage.getItem("myCredits");
         console.log(mycredits);
+
+        //----Log Button Code
+
+        const logBtn = document.getElementById("log-btn");
+
+        let data = [
+            {player:"Jane", Score:52},
+            {player:"Mark", Score:41}
+        ];
+        logBtn.addEventListener('click', function() {
+            console.log(data[0].Score);
+        });
     </script>
 </body>
 </html>
