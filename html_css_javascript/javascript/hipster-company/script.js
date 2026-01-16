@@ -7,10 +7,12 @@ const images = [
 
 
 function displayTeam () {
+    let imgsDom ="";
     for (i = 0; i < images.length; i++) {
         let path = images[i];
-        ourTeam.innerHTML += `<img src="${path}">`;
+        imgsDom += `<img src="${path}">`;
     }
+    ourTeam.innerHTML = imgsDom;
 }
 
 displayTeam();
