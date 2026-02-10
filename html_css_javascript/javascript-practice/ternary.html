@@ -8,10 +8,12 @@
 <body>
     <p id="output"></p>
     <script>
-        const excerciseTimeMins = 20;
+        const excerciseTimeMins = 95;
         const output = document.getElementById("output")
         let message = '';
-        message = excerciseTimeMins < 30 ? 'You need to try harder!' : 'Doing good!';
+        message = excerciseTimeMins < 30 ? 'You need to try harder!' 
+        : excerciseTimeMins < 60 ? 'Doing good!'
+        : 'This is too much.';
         output.textContent = message;
     </script>
 </body>
