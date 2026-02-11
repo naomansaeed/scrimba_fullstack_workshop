@@ -25,6 +25,8 @@
                 case 'biscuits' :
                     price = 4;
                     break;
+                default :
+                    return `Sorry! we don't sell that ${item}.`
             }
             return `You selected ${item}. That will be $${price}.`
             //return 'You selected '+item+'. That will be $'+price+'.'
