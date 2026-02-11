@@ -20,11 +20,14 @@
         //----
 
         // using ternary operator for a number guessing game
-        const playerGuess = 3;
+        const playerGuess = 6;
         const correctAnswer = 6;
         const printout = document.getElementById("output-2");
 
-        const result = playerGuess === correctAnswer ? 'Coorect' : 'Wrong';
+        //const result = playerGuess === correctAnswer ? 'Coorect' : 'Wrong';
+        const result = playerGuess < correctAnswer ? 'Too Low' 
+        : playerGuess > correctAnswer ? 'Too High'
+        : 'Exactly Right'
         printout.textContent = result;
     </script>
 </body>
