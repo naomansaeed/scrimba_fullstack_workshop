@@ -6,13 +6,26 @@
     <title>Object Destructuring</title>
 </head>
 <body>
+    <p id="output-El"></p>
     <script>
+        const outputEl = document.getElementById("output-El");
         const favoriteFilm = {
             title: "Top Gun",
+            year: "1986",
             genre: "action",
             star: "Tom Cruise",
             director: "Tony Scott"
         }
+
+        //noob method
+        const title = favoriteFilm.title;
+        const year = favoriteFilm.year;
+        const genre = favoriteFilm.genre;
+        const star = favoriteFilm.star;
+        const director = favoriteFilm.director;
+        let message = `My favorite film is ${title} starring ${star}. It is an ${genre} film 
+                        that was directed by ${director} and released in ${year}`
+        outputEl.textContent = message;
     </script>
 </body>
 </html>
