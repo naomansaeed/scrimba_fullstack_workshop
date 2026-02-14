@@ -7,13 +7,21 @@
 </head>
 <body>
     <p id="output-1"></p>
+    <p id="output-2"> </p>
     <script>
         const outputEl = document.getElementById("output-1");
+        const output = document.getElementById("output-2");
         function displayTraficLight (light) {
             outputEl.textContent = light;
         }
         setTimeout(displayTraficLight, 3000, '🟢');
         displayTraficLight('🔴')
+
+        function logAnswer(text) {
+            output.textContent = text;
+        }
+        setTimeout(logAnswer, 3000, `The answer is Lima of course! If you got that right, give yourself 10 points.`);
+        logAnswer("What is the capital of Peru?");
     </script>
 </body>
 </html>
