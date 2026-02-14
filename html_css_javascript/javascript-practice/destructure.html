@@ -18,13 +18,18 @@
         }
 
         //noob method
+        /*
         const title = favoriteFilm.title;
         const year = favoriteFilm.year;
         const genre = favoriteFilm.genre;
         const star = favoriteFilm.star;
-        const director = favoriteFilm.director;
+        const director = favoriteFilm.director;  */
+
+        // Pro method
+        const {title, year, genre, star, director} = favoriteFilm;
+
         let message = `My favorite film is ${title} starring ${star}. It is an ${genre} film 
-                        that was directed by ${director} and released in ${year}`
+                        that was directed by ${director} and released in ${year}.`
         outputEl.textContent = message;
     </script>
 </body>
