@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration for 'setTimeout'</title>
+</head>
+<body>
+    <p id="output-1"></p>
+    <script>
+        const outputEl = document.getElementById("output-1");
+        function displayTraficLight (light) {
+            outputEl.textContent = light;
+        }
+        setTimeout(displayTraficLight, 3000, '🟢');
+        displayTraficLight('🔴')
+    </script>
+</body>
+</html>
