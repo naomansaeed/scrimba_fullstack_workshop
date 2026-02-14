@@ -7,6 +7,7 @@
 </head>
 <body>
     <p id="output-El"></p>
+    <p id="output-2"></p>
     <script>
         const outputEl = document.getElementById("output-El");
         const favoriteFilm = {
@@ -45,6 +46,8 @@
 
         let myText = `I would like to go to ${destination} for a ${activity} I would sleep 
                         in a ${accomodation} tent & hang out with my ${companion}.`;
+        const secondPara = document.getElementById("output-2");
+        secondPara.textContent = myText;
     </script>
 </body>
 </html>
