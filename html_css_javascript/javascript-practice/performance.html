@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const output = document.getElementById("output");
+        //Get the starting timestamp.
+        const start = performance.now();
+        setTimeout (() => {
+            //Get the ending timestamp.
+            const end = performance.now();
+            console.log (`Execution time: ${end - start} miliseconds`);
+        }, 1000);
+
+        for (let i=0; i< 1000000; i++) {
+            let answer = i * 2000000 / 67.8 * (45.7/3.2);
+            //output.textContent += `${answer},`;
+        }
+    </script>
+</body>
+</html>
