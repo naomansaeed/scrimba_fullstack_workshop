@@ -8,6 +8,7 @@
 <body>
     <p id="output-1"></p>
     <p id="output-2"> </p>
+    <button id="stop">Stop</button>
     <script>
         const outputEl = document.getElementById("output-1");
         const output = document.getElementById("output-2");
@@ -20,8 +21,13 @@
         function logAnswer(text) {
             output.textContent = text;
         }
-        setTimeout(logAnswer, 3000, `The answer is Lima of course! If you got that right, give yourself 10 points.`);
+        const questionTimer = setTimeout(logAnswer, 3000, `The answer is Lima of course! If you got that right, give yourself 10 points.`);
         logAnswer("What is the capital of Peru?");
+
+        document.getElementById('stop').addEventListener('click', function () {
+            clearTimeout(questionTimer);
+            console.log("cancelling ...");
+        })
     </script>
 </body>
 </html>
