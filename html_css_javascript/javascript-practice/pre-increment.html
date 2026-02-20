@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Increment</title>
+</head>
+<body>
+    <script>
+        let currentTicketNumber = 0;
+        function getNextTicketNumber() {
+            //putting the increment operator before the variable is called pre-increment
+            return ++currentTicketNumber;
+        }
+
+        console.log(`Guest 1, your ticket number is: ${getNextTicketNumber()}`);
+        console.log(`Guest 2, your ticket number is: ${getNextTicketNumber()}`);
+        console.log(`Guest 3, your ticket number is: ${getNextTicketNumber()}`);
+
+        function getReverseTicketNumber() {
+            //putting the decrement operator before the variable is called pre-decrement
+            return --currentTicketNumber;
+        }
+
+        console.log(`Guest 4, your ticket number is: ${getReverseTicketNumber()}`);
+        console.log(`Guest 5, your ticket number is: ${getReverseTicketNumber()}`);
+        console.log(`Guest 6, your ticket number is: ${getReverseTicketNumber()}`);
+    </script>
+</body>
+</html>
