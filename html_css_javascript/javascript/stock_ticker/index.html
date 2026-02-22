@@ -6,9 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <script >
-        //let timestamp = now.toLocaleTimeString('en-PK',{hour12:false})
-        //console.log(timestamp);
+    <script src="fakeStockAPI.js">
+        import {getStockData} from './fakeStockAPI.js';
+        const now = new Date();
+        console.log(getStockData());
+      //  let timestamp = now.toLocaleTimeString('en-PK',{hour12:false})
+      //  console.log(timestamp);
+
+      /*  function getFormatedTime () {
+            const now = new Date();
+            let timestamp = now.toLocaleTimeString('en-PK',{hour12:false})
+
+        } */
     </script>
 </body>
 </html>

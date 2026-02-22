@@ -1,4 +1,5 @@
-function getStockData () {
+const now = new Date();
+export function getStockData () {
     return {
         name: 'QtechAI',
         sym: 'QTA',
