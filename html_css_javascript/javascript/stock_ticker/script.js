@@ -1,4 +1,4 @@
-import { getStockData } from "./fakeStockAPI";
+import { getStockData } from "./fakeStockAPI.js";
 
 setInterval (function() {
     const stockData = getStockData();
@@ -28,3 +28,4 @@ function renderStockTicker(stockData) {
 
     prevPrice = price;
 }
+
