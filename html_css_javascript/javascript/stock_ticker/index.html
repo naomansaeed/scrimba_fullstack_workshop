@@ -6,10 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="fakeStockAPI.js">
-        import {getStockData} from './fakeStockAPI.js';
-        const now = new Date();
-        console.log(getStockData());
+    <main>
+        <div id="card">
+            <strong>Name: </strong><p id="name"></p>
+            <strong>Symbol: </strong><p id="symbol"></p>
+            <strong>Price: </strong><p id="price"></p>
+            <strong>Time: </strong><p id="time"></p>
+        </div>
+    </main>
+    <script src="script.js">
+       // import {getStockData} from './fakeStockAPI.js';
+      //  const now = new Date();
+      //  console.log(getStockData());
       //  let timestamp = now.toLocaleTimeString('en-PK',{hour12:false})
       //  console.log(timestamp);
 
