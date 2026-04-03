@@ -36,6 +36,18 @@
         console.log(secretCode.indexOf("-"));
         console.log(shopping_list.indexOf("milk"));
         console.log(shopping_list.indexOf("eggs"));
+
+        // trying forEach() loop
+        console.log("🛒 Your Shopping List: ");
+        shopping_list.forEach((item, index) => {
+            console.log(`${index +1}. ${item.toUpperCase()}`);
+        });
+
+        let usernames = ["alice", "BOB", "charlie"];
+        console.log("Our Users: ")
+        usernames.forEach((item, index) => {
+            console.log(`${index +1}. ${item.toLowerCase()}`);
+        }) 
     </script>
 </body>
 </html>
