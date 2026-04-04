@@ -57,6 +57,22 @@
         let title = "Learning Javascript is awesome";
         let words = title.split(" ");
         console.log(words);
+
+        // join method for turning array into string
+        let slug = words.join("-");
+        console.log(slug);
+
+        // generating random number
+        let players = ["Alice", "Bob", "Charlie", "Diana"];
+        let winner = Math.floor(Math.random()*players.length);
+        console.log(players[winner]);
+
+        // forEach loop again
+        let message = "";
+        players.forEach(name => {
+            message = "Welcome to the game ";
+            console.log(`${message}${name}!`);
+        })
     </script>
 </body>
 </html>
