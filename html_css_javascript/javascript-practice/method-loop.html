@@ -100,6 +100,19 @@
             console.log(`${message}${name}!`);
             mainEl.innerHTML += `<p>${message}${name}!</p>`;
         })
+
+        //using map() method to manipulate each entry in string
+        let prices = [10, 20, 30];
+        let formattedPrices = prices.map(price => price + '$');
+        console.log(formattedPrices);
+        /*
+        prices.forEach (price => {
+            formattedPrices.push(price += '$');
+            //formattedPrices = price += '$';
+            //formattedPrices =prices[price];
+        })
+            */
+        
     </script>
 </body>
 </html>
