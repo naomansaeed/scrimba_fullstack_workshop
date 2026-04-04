@@ -6,72 +6,99 @@
     <title>Methods & Loops</title>
 </head>
 <body>
+    <main id="main-el">
+        <p id="para-el"></p>
+    </main>
     <script>
+        const mainEl = document.getElementById("main-el");
+        const paraEl = document.getElementById("para-el");
         // methods to manipulate text string.
         let username = "future_coder";
         console.log(username.toUpperCase());
+        paraEl.textContent += username.toUpperCase();
         console.log(username.replace("future","pro"));
+        mainEl.innerHTML += `<p>${username.replace("future","pro")}</p>`
+        //paraEl.textContent += username.replace("future","pro");
 
         // methods to manipulate array.
         let shopping_list = ["apples", "milk"];
         shopping_list.push("bread");
         console.log(shopping_list);
+        mainEl.innerHTML += `<p></p>`;
+        mainEl.innerHTML += `<p>${shopping_list}</p>`;
 
         // the for loop
         for (i=0; i<3; i++) {
             console.log(i);
+            mainEl.innerHTML += `<p>${i}</p>`;
         }
 
         // loop for array
         for(let i=0; i < shopping_list.length; i++){
             console.log(shopping_list[i]);
+            mainEl.innerHTML += `<p>${shopping_list[i]}</p>`;
         }
 
         // the includes() method | if thing present
         console.log(shopping_list.includes("milk"));
+        mainEl.innerHTML += `<p>${shopping_list.includes("milk")}</p>`;
         console.log(shopping_list.includes("eggs"));
+        mainEl.innerHTML += `<p>${shopping_list.includes("eggs")}</p>`;
 
         // the indexOf() method for locating data | where thing present and found
         let secretCode = "892-XJ-44";
         console.log(secretCode.indexOf("-"));
+        mainEl.innerHTML += `<p>${secretCode.indexOf("-")}</p>`;
         console.log(shopping_list.indexOf("milk"));
+        mainEl.innerHTML += `<p>${shopping_list.indexOf("milk")}</p>`;
         console.log(shopping_list.indexOf("eggs"));
+        mainEl.innerHTML += `<p>${shopping_list.indexOf("eggs")}</p>`;
 
         // trying forEach() loop
         console.log("🛒 Your Shopping List: ");
+        mainEl.innerHTML += `<p>${"🛒 Your Shopping List: "}</p>`;
         shopping_list.forEach((item, index) => {
             console.log(`${index +1}. ${item.toUpperCase()}`);
+            mainEl.innerHTML += `<p>${index+1}. ${item.toUpperCase()}</p>`;
         });
 
         let usernames = ["alice", "BOB", "charlie"];
         console.log("Our Users: ")
+        mainEl.innerHTML += `<p>Our Users: </p>`;
         usernames.forEach((item, index) => {
             console.log(`${index +1}. ${item.toLowerCase()}`);
+            mainEl.innerHTML += `<p>${index +1}. ${item.toLocaleLowerCase()}</p>`;
         }) 
 
         // slice() method for data extraction
         console.log(secretCode.slice(0,3));
+        mainEl.innerHTML += `<p>${secretCode.slice(0,3)}</p>`;
         console.log(secretCode.slice(0,6));
+        mainEl.innerHTML += `<p>${secretCode.slice(0,6)}</p>`;
 
         //split() method for turning string into array
         let title = "Learning Javascript is awesome";
         let words = title.split(" ");
         console.log(words);
+        mainEl.innerHTML += `<p>${words}</p>`;
 
         // join method for turning array into string
         let slug = words.join("-");
         console.log(slug);
+        mainEl.innerHTML += `<p>${slug}</p>`;
 
         // generating random number
         let players = ["Alice", "Bob", "Charlie", "Diana"];
         let winner = Math.floor(Math.random()*players.length);
         console.log(players[winner]);
+        mainEl.innerHTML += `<p>${players[winner]}</p>`;
 
         // forEach loop again
         let message = "";
         players.forEach(name => {
             message = "Welcome to the game ";
             console.log(`${message}${name}!`);
+            mainEl.innerHTML += `<p>${message}${name}!</p>`;
         })
     </script>
 </body>
