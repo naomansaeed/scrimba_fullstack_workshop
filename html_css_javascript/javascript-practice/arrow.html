@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        //This is to understand the use of => in writing a function
+        // Apperantly it is the modern approach
+
+        //Classic way to write a function
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet("Sara"));
+
+        // Function expression | different syntax
+        const greet_one = function(name) {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet_one("Martha"));
+
+        // arrow function consise + modern
+        const greet_two = (name) => {
+            return "Hello, " + name + "!";
+        }
+        console.log(greet_two("Daisy"));
+
+        // super concise | when possible
+        const greet_three = name => "Hello, " + name + "!";
+        console.log(greet_three("Cordilia"));
+    </script>
+</body>
+</html>
