@@ -29,9 +29,16 @@
         }
 
         console.log(tripleNumber(5));
-
+        // for only 1 parameter & simple logic, () & {} & 'return' can be skipped
         const doubleNumber = num => num * 2;
         console.log(doubleNumber(7))
+
+        //default value can be set for when the user forgets to provide value
+        const greetUser = (name = 'Guest') => {
+            return `Welcome! ${name}.`;
+        }
+        console.log(greetUser('Edmond'));
+        console.log(greetUser());
     </script>
 </body>
 </html>
