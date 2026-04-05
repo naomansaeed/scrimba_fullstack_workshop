@@ -27,13 +27,18 @@
 
         /*
         Challenge:
-        - speedWarning function 
-        - takes 'speed' as parameter
-        - minimal code
+        - speedWarning function : warn only when speed limit crossed
+        - take two parameters : speedLimit, actualSpeed
+        
         */
         
-        const speedWarning = speed => `You are going at ${speed} mph!`;
-        console.log(speedWarning(40));
+        //const speedWarning = speed => `You are going at ${speed} mph!`;
+        const speedWarning = (speedLimit = 30, actualSpeed = 0) => {
+            if (actualSpeed > speedLimit) {
+                return `You are going at ${actualSpeed} mph!`;
+            }
+        }
+        console.log(speedWarning(30, 40));
     </script>
 </body>
 </html>
