@@ -115,8 +115,13 @@
         
         // the filter() method for data manipulation
         let scores = [25, 80, 42, 95, 50];
-        let highScores = scores.filter(score => (score >= 50));
+        let highScores = scores.filter(score => (score >= 50))
         console.log(highScores); 
+
+        //filter and map at the same time
+        let marks = [35, 68, 42, 125, 83];
+        let topMarks = marks.filter(mark => (mark >= 50)).map(mark => '#' + mark);
+        console.log(topMarks);
         
     </script>
 </body>
