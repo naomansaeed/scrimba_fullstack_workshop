@@ -7,10 +7,22 @@
 </head>
 <body>
     <script>
+        //arrow function with single parameter
         const getSpendAlert = (amount) => {
             return `Warning! You just spent ${amount} PKR`;
         }
         console.log(getSpendAlert(150));
+        // with no parameters
+        const sendAlert = () => {
+            return `Warning! Health Critically Low`;
+        }
+
+        console.log(sendAlert());
+
+        const showNotice = (year, age) => {
+            return `It is now ${year} & You have turned ${age}`;
+        }
+        console.log(showNotice(2027, 19));
     </script>
 </body>
 </html>
