@@ -37,6 +37,20 @@
         members.forEach(member => {
             console.log (`New member ${member} has joined. Welcome to her!`);
         });
+
+        //rest parameters: written as ...parameter & used to recieve undetermined number of input
+        const sumScores = (...allScores) => {
+            let total = 0;
+            for(let i=0; i< allScores.length; i++) {
+                total += allScores[i];
+            }
+            return total;
+        }
+        /*(...allScores) => {
+            allScores.reduce(total, current) 
+        } */
+
+        console.log(sumScores(72, 53, 81));
     </script>
 </body>
 </html>
