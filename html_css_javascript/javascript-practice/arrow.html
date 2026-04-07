@@ -40,11 +40,14 @@
 
         //rest parameters: written as ...parameter & used to recieve undetermined number of input
         const sumScores = (...allScores) => {
-            let total = 0;
+        /*    let total = 0;
             for(let i=0; i< allScores.length; i++) {
                 total += allScores[i];
             }
-            return total;
+            return total; */
+
+            //add up all vales using reduce() method
+            return allScores.reduce((total,current) => total + current, 0);
         }
         /*(...allScores) => {
             allScores.reduce(total, current) 

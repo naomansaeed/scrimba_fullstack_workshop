@@ -43,9 +43,7 @@
         // rest parameters
         const distanceTraveledMiles = [267, 345, 234, 190, 299];
 
-        const distanceTraveledKms = distanceTraveledMiles.map(function(distance){
-            return Math.round(distance * 1.6);
-        })
+        const distanceTraveledKms = distanceTraveledMiles.map(distance => Math.round(distance * 1.6))
 
         console.log(distanceTraveledKms);
     </script>
