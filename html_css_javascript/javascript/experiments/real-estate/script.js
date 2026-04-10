@@ -40,5 +40,23 @@ Following is the HTML template. Replace everything in the UPPERCASE with propert
 
 */
 
+import { propertyForSaleArr, placeholderPropertyObj } from "./properties/data.js";
+
 /* | Modify 👇 by adding an argument for the function call ONLY. |*/
-document.getElementById(container).innerHTML = getPropertyHtml();
+document.getElementById("container").innerHTML = getPropertyHtml();
+//const {propertyLocation, pricePKR, roomsM2, comment, image} = propertyForSaleArr;
+export function getPropertyHtml(properties= [placeholderPropertyObj]){
+    const cardsArray = properties.map(({propertyLocation, pricePKR, comment, image}) =>{
+        return `<section class="card">
+                    <img src="${image}" alt="Property in ${propertyLocation}">
+                    <div class="card-right">
+                        <h2>${propertyLocation}</h2>
+                        <h3>${pricePKR.toLocaleString()} PKR</h3>
+                        <p>${comment}</p>
+                        <h3>Total Size in Square Meters: m&sup2;</h3>
+                    </div>
+                </section>`;
+    });
+
+    return cardsArray.join(' ');
+}
