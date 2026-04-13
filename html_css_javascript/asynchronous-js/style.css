@@ -2,3 +2,10 @@
     width: 600px;
     height: 400px;
 }
+
+#breed-el {
+    text-align: left; 
+    font-weight: 500; 
+    margin-top: 8px; 
+    color: #555;
+}
