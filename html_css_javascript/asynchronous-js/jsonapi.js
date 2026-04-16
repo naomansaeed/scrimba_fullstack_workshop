@@ -28,6 +28,7 @@ async function fetchAndDisplayPosts() {
         const response = await fetch(url_addr);
         if (!response.ok) { 
             console.log("Failed! Resourse not found.");
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
          }
         const posts = await response.json();
 
@@ -43,7 +44,7 @@ async function fetchAndDisplayPosts() {
          })
     }
     catch (error) {
-        console.error("❌ Failed to fetch posts:", error.message);
+        console.error("⚠️ Could not load posts. Check your connection.", error.message);
     }
     finally{
         console.log("Posts fetch attempt completed");
