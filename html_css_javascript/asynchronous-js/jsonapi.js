@@ -53,3 +53,42 @@ async function fetchAndDisplayPosts() {
 
 // 🚀 Start the process
 fetchAndDisplayPosts();
+
+//---
+
+// 🎯 GOAL: Create a new post with title "Holiday Nightmares"
+
+// const createPostUrl = "https://jsonplaceholder.typicode.com/posts";
+
+async function createNewPost() {
+    try {
+        // Configure the fetch options object
+        const response = await fetch(url_addr, {
+            method:'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'accept': 'application/json'
+            },
+            body: JSON.stringify({
+                title: 'Holiday Nightmares',
+                body: 'when I was kidnapped in Scotland...',
+                userId: 1,
+            })
+        });
+        if(!response.ok){
+            throw new Error(`HTTP ${response.status}: Failed to create post`);
+        }
+        const newPost = await response.json();
+
+        console.log('New Post Created: ', newPost);
+    }
+    catch(error){
+        console.error("Failed to create the post.", error.message);
+    }
+    finally{
+        console.log("Operation Completed!");
+    }
+}
+
+// Calling the function
+createNewPost();
