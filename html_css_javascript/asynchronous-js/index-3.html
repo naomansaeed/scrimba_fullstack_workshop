@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding JSON</title>
+</head>
+<body>
+    <script>
+        // 📦 A regular JavaScript object (lives in memory)
+const user = {
+  name: "Aria",
+  age: 28,
+  isAdmin: false,
+  // Note: functions & undefined exist in JS objects, but NOT in JSON
+  greet: () => console.log("Hi!"),
+  role: undefined
+};
+
+// 📤 Convert JS object → JSON string (for transmission/storage)
+const jsonString = JSON.stringify(user);
+console.log("JSON String:", jsonString);
+// Output: '{"name":"Aria","age":28,"isAdmin":false}'
+// 🔍 Notice: `greet` and `role` disappeared. JSON silently drops unsupported values.
+
+// 📥 Convert JSON string → JS object (after receiving from an API)
+const parsedUser = JSON.parse(jsonString);
+console.log("Parsed Object:", parsedUser);
+// Output: { name: "Aria", age: 28, isAdmin: false }
+// ✅ Now you can safely use parsedUser.name, parsedUser.age, etc.
+
+//----
+// creating 'config'  object
+    const config = {
+        theme: "dark",
+        version: 2.5,
+        plugins: ["analytics", "auth"],
+        debug: undefined
+    };
+    
+    // Converting object to string
+    const myString = JSON.stringify(config);
+    console.log("json string: ", myString);
+    // Expected Output: {"theme":"dark", "version": 2.5, "plugins": ["analytics", "auth"], "debug": undefined}
+    // observation: "debug" was omitted in the result.
+
+    //Converting to JS object
+    const parsedConfig = JSON.parse(myString);
+    console.log("Parsed Config: ", parsedConfig);
+    //Expected output: {theme: "dark", version: 2.5, plugins: ["analytics", "auth"]}
+
+    /* 
+    Note on localStorage:
+    only string values can be stored. Therefore, JavaScript objects have to be converted to json
+    to be stored.
+    */
+    </script>
+    <script src="promise.js" type="module"></script>
+</body>
+</html>
