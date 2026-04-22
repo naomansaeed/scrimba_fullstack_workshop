@@ -1,31 +1,65 @@
-function uploadFile(callback) {
-    console.log('Step 1: Uploading File...');
-    setTimeout(() =>{
-        callback(); // call the next step after one second
+// 🎯 GOAL: Wrap the setTimeout logic in a Promise
+
+function uploadFile() {
+    // Return a new Promise so callers can await it
+    return new Promise((resolve, reject) => {
+        console.log('Step 1: Uploading File...');
+        setTimeout(() =>{
+            // Simulate success (no error for now)
+            // 👇 Call resolve() to signal "this step is done"
+            resolve();
+                            //callback(); // call the next step after one second
+
+        // If there was an error, we'd call: reject(new Error("Upload failed"))
     }, 1000);
+    })
+    
 }
 
 function processFile(callback) {
-    console.log('Step 2: Processing File...');
-    setTimeout(() => {
-        callback(); // call the next step after one second
+    return new Promise((resolve, reject) => {
+        console.log('Step 2: Processing File...');
+        setTimeout(() => {
+            resolve();
+        //callback(); // call the next step after one second
     }, 1000)
+    })
+    
 }
 
 function notifyUser(callback) {
-    console.log('Step 3: Notifying User...');
-    setTimeout(() => {
-        callback(); // call the next step after one second
+    return new Promise((resolve, reject) => {
+        console.log('Step 3: Notifying User...');
+        setTimeout(() => {
+            resolve();
+        //callback(); // call the next step after one second
     }, 1000)
+    })
+    
 }
 
+async function runPipeline() {
+    try {
+        await uploadFile();
+        await processFile();
+        await notifyUser();
+    } catch (error) {
+        console.error('Operation failed: ', error.message);
+    } finally{
+        console.log('All Steps Completed.');
+    }
+}
+
+runPipeline();
+
+/*
 uploadFile(() => 
     processFile(() =>
         notifyUser(
             () => console.log('All Steps Completed.')
         )
     )
-)
+) */
 
 /* 
 Challenge: 
