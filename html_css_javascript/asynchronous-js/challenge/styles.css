@@ -1,0 +1,50 @@
+/* VIEW 1: Vertical rectangle layout */
+#upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Hide img-container initially (optional) */
+#img-container:empty {
+  display: none;
+}
+
+/* VIEW 2: Horizontal image row */
+#img-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* tiny distance between pictures */
+  padding: 24px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#img-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Button styling */
+#submit-imgs {
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#submit-imgs:hover {
+  background: #45a049;
+}
